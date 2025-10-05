@@ -1,0 +1,41 @@
+/* Step 1: Positioning layout using Flexbox */
+
+/* Make body a flex container with vertical stacking */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* optional, makes full-page layout cleaner */
+}
+
+/* Make main a flex container with horizontal stacking */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+}
+
+/* Article takes 2/3 of the space */
+article {
+  flex: 2;
+  overflow-y: auto;
+}
+
+/* Aside takes 1/3 of the space */
+aside {
+  flex: 1;
+  overflow-y: auto;
+}
+header,
+footer {
+  background-color: #ddd;
+  text-align: center;
+  padding: 15px;
+}
+
+article {
+  background-color: #f5f5f5;
+}
+
+aside {
+  background-color: #fafafa;
+}
