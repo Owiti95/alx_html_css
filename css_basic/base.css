@@ -1,0 +1,26 @@
+/* Basic reset and default styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header,
+footer {
+  background-color: #eee;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+main {
+  background-color: #fff;
+  padding: 10px;
+}
+
+article,
+aside {
+  padding: 10px;
+  box-sizing: border-box;
+}
