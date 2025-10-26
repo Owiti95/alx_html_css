@@ -1,0 +1,473 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #fff;
+  background-color: #b1aeae;
+  overflow-x: hidden;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: transparent;
+}
+
+header img {
+  height: 40px;
+  margin-right: auto;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+  color: #b388ff;
+}
+
+/* HERO SECTION */
+main section:first-of-type {
+  position: relative;
+  background: url('./images/Object.png') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  min-height: 100vh; /* Full screen hero */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  padding: 0 20px;
+}
+
+main section:first-of-type::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 250px;
+  background: linear-gradient(transparent, #000);
+  pointer-events: none;
+}
+
+main section:first-of-type > div:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+main section:first-of-type h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+main section:first-of-type span {
+  margin: 0 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #b0b0b0;
+}
+
+main section:first-of-type button {
+  margin-top: 25px;
+  background-color: #b388ff;
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+main section:first-of-type button:hover {
+  background-color: #9d6bff;
+  transform: scale(1.05);
+}
+
+/* LEARN FROM THE PROS */
+section:nth-of-type(1) > div:nth-of-type(2) {
+  text-align: center;
+  padding: 100px 0;
+  color: #fff;
+}
+
+section:nth-of-type(1) > div:nth-of-type(2) h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+section:nth-of-type(1) > div:nth-of-type(2) > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin: 0 auto;
+}
+
+section:nth-of-type(1) > div:nth-of-type(2) > div > div {
+  text-align: center;
+  max-width: 200px;
+}
+
+section:nth-of-type(1) > div:nth-of-type(2) img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+section:nth-of-type(1) > div:nth-of-type(2) h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+section:nth-of-type(1) > div:nth-of-type(2) p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+/* WEATHER PRESENTER */
+main section:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 200px 20px;
+  background-color: #2d3366;
+  flex-wrap: wrap;
+}
+
+main section:nth-of-type(2) img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+main section:nth-of-type(2) blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ddd;
+  max-width: 500px;
+}
+
+/* MOST POPULAR TUTORIALS */
+main section:nth-of-type(3) {
+  background-color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+main section:nth-of-type(3) h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #b388ff;
+  margin-bottom: 60px;
+}
+
+.tutorials-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tutorial-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 20px;
+  width: 260px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tutorial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tutorial-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.tutorial-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.tutorial-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* FREE MEMBERSHIP */
+main section:nth-of-type(4) {
+  background-color: #2d3366;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+main section:nth-of-type(4) h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #b388ff;
+  margin-bottom: 60px;
+}
+
+.membership-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin: 0 auto 60px auto;
+}
+
+.membership-cards > div {
+  text-align: center;
+  background-color: #2d3366;
+  padding: 20px;
+  border-radius: 12px;
+  width: 220px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.membership-cards > div:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px #2d3366;
+}
+
+main section:nth-of-type(4) button {
+  margin-top: 10px;
+  background-color: #b388ff;
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+main section:nth-of-type(4) button:hover {
+  background-color: #9d6bff;
+  transform: scale(1.05);
+}
+
+/* FAQ SECTION */
+main section:nth-of-type(5) {
+  background-color: #fff;
+  color: #222;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+main section:nth-of-type(5) h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 80px;
+  color: #111;
+}
+
+main section:nth-of-type(5) > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+main section:nth-of-type(5) > div > div {
+  flex: 1;
+  max-width: 500px;
+}
+
+main section:nth-of-type(5) h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+main section:nth-of-type(5) > div > div > div {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* FOOTER */
+footer {
+  background-color: #0b1623;
+  color: #fff;
+  padding: 60px 20px 30px;
+  text-align: center;
+  margin-top: auto; /* keep footer down */
+}
+
+footer section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+footer section > div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+footer img {
+  height: 40px;
+}
+
+footer i {
+  background-color: #fff;
+  color: #0b1623;
+  font-size: 1rem;
+  border-radius: 50%;
+  padding: 10px;
+  margin-left: 15px;
+  transition: all 0.3s ease;
+}
+
+footer i:hover {
+  background-color: #b388ff;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 40px;
+  }
+
+  main section:first-of-type h1 {
+    font-size: 3rem;
+  }
+
+  .tutorial-card {
+    width: 45%;
+  }
+
+  .membership-cards > div {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  header ul {
+    display: none;
+  }
+
+  header {
+    padding: 20px 30px;
+  }
+
+  main section:first-of-type h1 {
+    font-size: 2.2rem;
+  }
+
+  .tutorial-card {
+    width: 90%;
+  }
+
+  .membership-cards > div {
+    width: 90%;
+  }
+
+  main section:nth-of-type(2) {
+    flex-direction: column;
+    padding: 100px 20px;
+  }
+
+  main section:nth-of-type(5) > div {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  main section:first-of-type h1 {
+    font-size: 1.8rem;
+  }
+
+  main section:nth-of-type(3) h2,
+  main section:nth-of-type(4) h2 {
+    font-size: 2rem;
+  }
+
+  .tutorial-card,
+  .membership-cards > div {
+    width: 100%;
+  }
+
+  footer section > div {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
